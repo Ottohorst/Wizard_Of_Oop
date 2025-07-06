@@ -3,14 +3,17 @@ package src;
 public class Weapon {
 
     String name;
-
     String description;
+
+
+    String icon;
     int damagePlus;
     int levelNeeded;
 
-    Weapon(String name, String description, int damagePlus, int levelNeeded) {
+    Weapon(String name, String icon, String description, int damagePlus, int levelNeeded) {
 
         this.name = name;
+        this.icon = icon;
         this.description = description;
         this.damagePlus = damagePlus;
         this.levelNeeded = levelNeeded;
@@ -22,6 +25,15 @@ public class Weapon {
 
 
 
+
+
+    public String getIcon() {
+        return icon;
+    }
+
+    public void setIcon(String icon) {
+        this.icon = icon;
+    }
 
     public String getName() {
         return name;

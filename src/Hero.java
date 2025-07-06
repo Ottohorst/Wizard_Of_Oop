@@ -5,7 +5,9 @@ import java.util.Random;
 public class Hero {
 
     private String name;
-    private int health = 50;
+
+    private String icon;
+    private int health = 40;
     private int attack = 1;
 
     private int xppoints = 0;
@@ -19,21 +21,25 @@ public class Hero {
 
     Weapon weapon;
 
-    Hero(String name, Weapon weapon) {
+    Hero(String name, String icon, Weapon weapon) {
         this.name = name;
+        this.icon = icon;
         this.weapon = weapon;
     }
+
+    // Die Angriffsmethode addiert Attack-Wert des Helden, Bonus durch die Waffe und bis zu 2 zufallsgenerierte Punkte.
 
     public int attack(Monster monster) {
 
         Random rand = new Random();
-        int randomExtraDamage = rand.nextInt(0, 2);
+        int randomExtraDamage = rand.nextInt(0, 3);
         int damage = (attack + weapon.getDamagePlus() + randomExtraDamage);
-        Print.out("\uD83D\uDDE1\uFE0F - Der Angriff von " + name + " mit " + weapon.getName() + " macht" + damage + " Schaden");
+        // Print.out("\uD83D\uDDE1\uFE0F - Der Angriff von " + name + " mit " + weapon.getName() + " macht" + damage + " Schaden");
+
         return damage;
     }
 
-    public int magicAttack(Monster monster) {
+    public int calculatemagicAttack(Monster monster) {
 
         int manaCost = 10 - (level / 2);
         if (manaCost < 2) manaCost = 2;
@@ -96,6 +102,14 @@ public class Hero {
 
 
     // Getter und Setter
+
+    public String getIcon() {
+        return icon;
+    }
+
+    public void setIcon(String icon) {
+        this.icon = icon;
+    }
 
     public int getHealth() {
         return health;

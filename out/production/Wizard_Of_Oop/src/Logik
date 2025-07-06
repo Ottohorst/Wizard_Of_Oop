@@ -1,0 +1,37 @@
+
+
+
+
+
+Wird ein Kampf gestartet, sieht man einmal Stats und dann gehts eigentlich nur Runde für Runde durch.
+
+BattleRound - hier ist die komplette Kampflogik
+
+Jeder Held wählt einen Kampfmodus (oder Rückzug) und einen Gegner.
+
+Dann was genau?
+
+Idee 1: Die Angriffe sind jeweils eine Methode des Helden, das Monster wird übergeben.
+        In der Methode wird der Schaden berechnet und auch z.B. ob noch Mana reicht.
+        Eine Ausgabe findet während der Methode statt.
+        Nehmen wir an, der Schaden wird direkt abgezogen - über die takeDamage-Funktion im
+        Monster, die auch gleich prüft, ob das Monster stirbt.
+        Dann wird es ggf. umständlich, sauber auszugeben, aber lässt sich hinkriegen.
+
+        Funktioniert und ist relativ easy zu bauen.
+
+        Wie ist es mit der Erweiterbarkeit?
+
+        Nehmen wir an, statt einer Zauberattacke gäbe es 5 verschiedene.
+        Und z.B. einer könnten gleich mehrere Monster übergeben werden.
+
+        Müsste man dann jeweils eine Methode für bauen. Die kann dann auch beliebig viele
+        Parameter haben.
+
+
+
+        Jetzt die Preisfrage: Wird der Schaden zurückgegeben oder direkt abgezogen?
+
+
+
+

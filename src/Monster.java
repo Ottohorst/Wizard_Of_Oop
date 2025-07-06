@@ -4,6 +4,8 @@ public class Monster {
 
     private String name = "Monster";
 
+    private String icon;
+
     private int health = 10;
 
     private int attack = 1;
@@ -16,26 +18,40 @@ public class Monster {
 
     Monster(int level) {
         this.level = level;
-
-        health = health + level * 10;
+        health = health + level * 5;
         attack = attack + level;
         xpvalue = xpvalue + (xpvalue * level);
 
         switch (level) {
             case 0:
                 name = "Skelett";
+                icon = S.SKELETON;
                 break;
             case 1:
                 name = "Skelettkrieger";
+                icon = S.SKELETON;
                 break;
             case 2:
                 name = "Zombie";
+                icon = S.ZOMBIE;
                 break;
             case 3:
-                name = "Zombiereiter";
+                name = "Vampir";
+                icon = S.VAMPIRE;
                 break;
             case 4:
-                name = "Leichenfürst";
+                name = "Skorpion";
+                icon = S.SKORPION;
+                break;
+            case 5:
+                name = "Drachenjunges";
+                icon = S.SMALLDRAGON;
+            case 6:
+                name = "Königsdrache";
+                icon = S.BIGDRAGON;
+            case 7:
+                name = "Teufel";
+                icon = S.DEVIL;
         }
     }
 
@@ -77,4 +93,11 @@ public class Monster {
         return level;
     }
 
+    public String getIcon() {
+        return icon;
+    }
+
+    public void setIcon(String icon) {
+        this.icon = icon;
+    }
 }
