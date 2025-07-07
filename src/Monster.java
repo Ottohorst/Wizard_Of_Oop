@@ -28,30 +28,42 @@ public class Monster {
                 icon = S.SKELETON;
                 break;
             case 1:
-                name = "Skelettkrieger";
-                icon = S.SKELETON;
-                break;
-            case 2:
                 name = "Zombie";
                 icon = S.ZOMBIE;
                 break;
+            case 2:
+                name = "Skelettkrieger";
+                icon = S.SKELETON;
+                break;
             case 3:
-                name = "Vampir";
-                icon = S.VAMPIRE;
+                name = "Skelettritter";
+                icon = S.SKELETON;
                 break;
             case 4:
+                name = "Zombiereiter";
+                icon = S.ZOMBIE;
+            case 5:
                 name = "Skorpion";
                 icon = S.SKORPION;
                 break;
-            case 5:
+            case 6:
                 name = "Drachenjunges";
                 icon = S.SMALLDRAGON;
-            case 6:
-                name = "Königsdrache";
-                icon = S.BIGDRAGON;
             case 7:
                 name = "Teufel";
                 icon = S.DEVIL;
+            case 8:
+                name = "Teufelin";
+                icon = S.DEVIL;
+            case 9:
+                name = "Drache";
+                icon = S.BIGDRAGON;
+            case 12:
+                name = "Königsdrache";
+                icon = S.BIGDRAGON;
+                case 20:
+                name = "Rachnow der Vampirfürst";
+                icon = S.VAMPIRE;
         }
     }
 
